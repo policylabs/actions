@@ -1,8 +1,10 @@
-# Carabiner Actions
+# PolicyLabs Actions
 
-This repository contains reusable GitHub Actions for various tools in the
-Carabiner ecosystem. These actions help streamline security policy verification,
-attestation management, and supply chain security workflows.
+This repository contains reusable GitHub Actions for the 🔴🟡🟢 AMPEL supply
+chain policy engine: verifying artifacts against security policies and
+installing AMPEL into the runner environment.
+
+These actions moved here from `carabiner-dev/actions`.
 
 > [!NOTE]
 > The composite actions here compose one another through GitHub's `$/`
@@ -23,7 +25,7 @@ its attestations against a policy.
 #### Usage
 
 ```yaml
-- uses: carabiner-dev/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
+- uses: policylabs/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
   with:
     policy: 'path/to/policy.yaml'   # URI or path to policy code
     subject: 'path/to/artifact'     # or digest, eg sha256:98349875bf3e09...
@@ -52,7 +54,7 @@ its attestations against a policy.
 **Basic verification:**
 
 ```yaml
-- uses: carabiner-dev/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
+- uses: policylabs/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
   with:
     policy: '.ampel/policy.yaml'
     subject: 'path/to/binary'
@@ -62,7 +64,7 @@ its attestations against a policy.
 **Verification with custom attestations:**
 
 ```yaml
-- uses: carabiner-dev/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
+- uses: policylabs/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
   with:
     policy: '.ampel/policy.yaml'
     subject: 'sha256:abc123...'
@@ -74,7 +76,7 @@ its attestations against a policy.
 **Verification with attestation push:**
 
 ```yaml
-- uses: carabiner-dev/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
+- uses: policylabs/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
   with:
     policy: '.ampel/policy.yaml'
     subject: 'path/to/artifact'
@@ -87,7 +89,7 @@ its attestations against a policy.
 **Verification without failing the workflow:**
 
 ```yaml
-- uses: carabiner-dev/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
+- uses: policylabs/actions/ampel/verify@2f56fd66c5ef961f72bca3dbacbbfbd9acc717ee # v1.3.2
   with:
     policy: '.ampel/policy.yaml'
     subject: 'path/to/artifact'

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2026 Carabiner Systems, Inc
+# SPDX-FileCopyrightText: Copyright 2026 The Policy Labs Project Contributors
 # SPDX-License-Identifier: Apache-2.0
 
 # This action bootstraps a trusted ampel binary by downloading a pinned version
@@ -13,7 +13,7 @@
 # binaries, compute their SHA-256 hashes, and update the case block below.
 
 name: Bootstrap ampel
-author: carabiner-dev
+author: policylabs
 description: 'Installs a hash-verified ampel binary for use as a trust anchor'
 branding:
   icon: 'shield'

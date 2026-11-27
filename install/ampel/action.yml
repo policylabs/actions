@@ -1,8 +1,8 @@
-# SPDX-FileCopyrightText: Copyright 2026 Carabiner Systems, Inc
+# SPDX-FileCopyrightText: Copyright 2026 The Policy Labs Project Contributors
 # SPDX-License-Identifier: Apache-2.0
 
 name: setup ampel
-author: carabiner-dev
+author: policylabs
 description: "Installs the \U0001F534\U0001F7E1\U0001F7E2 AMPEL policy engine into to the runner environment"
 branding:
   icon: 'download-cloud'

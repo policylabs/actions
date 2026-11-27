@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: Copyright 2026 Carabiner Systems, Inc
+# SPDX-FileCopyrightText: Copyright 2026 The Policy Labs Project Contributors
 # SPDX-License-Identifier: Apache-2.0
 
-name: Download and verify Carabiner binary
-author: carabiner-dev
+name: Download and verify binary
+author: policylabs
 description: >
-  Downloads a Carabiner binary from GitHub releases and optionally verifies
+  Downloads a tool binary from GitHub releases and optionally verifies
   it using a bootstrapped ampel trust anchor against SLSA provenance.
 branding:
   icon: 'download-cloud'
