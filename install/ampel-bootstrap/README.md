@@ -1,6 +1,6 @@
 # ampel-bootstrap
 
-This action is the trust anchor for all Carabiner tool installers. It downloads
+This action is the trust anchor for the tool installers. It downloads
 a **pinned** version of the ampel binary and verifies its integrity against
 hardcoded SHA-256 hashes before making it available for use.
 
@@ -44,5 +44,5 @@ merges; nothing else needs to be repointed.
 ampel is the tool that verifies binary integrity, but it can't verify itself
 before it exists on the runner. The hardcoded SHA-256 hashes break this
 chicken-and-egg problem. The hashes are trusted because the action is pinned by
-commit SHA — anyone referencing `carabiner-dev/actions/install/ampel-bootstrap@<sha>`
+commit SHA — anyone referencing `policylabs/actions/install/ampel-bootstrap@<sha>`
 is explicitly trusting the hashes at that commit.

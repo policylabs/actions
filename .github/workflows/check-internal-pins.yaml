@@ -9,7 +9,7 @@ name: Check Internal References
 # with the release it ships in, so no self-pins need bumping before a tag.
 #
 # This job guards the invariant: no action definition may reference
-# carabiner-dev/actions by name again, since such a reference would pin an
+# policylabs/actions by name again, since such a reference would pin an
 # internal step to an unrelated (and inevitably stale) commit.
 on:
   pull_request:
@@ -35,13 +35,13 @@ jobs:
           set -euo pipefail
 
           HITS=$(
-            grep -rnE "^[[:space:]]*(-[[:space:]]+)?uses:[[:space:]]*['\"]?carabiner-dev/actions/" \
+            grep -rnE "^[[:space:]]*(-[[:space:]]+)?uses:[[:space:]]*['\"]?policylabs/actions/" \
               --include=action.yml --include=action.yaml . || true
           )
 
           if [ -n "${HITS}" ]; then
             echo "::error::Internal references must use the \$/ same-repository syntax"
-            echo "Replace 'uses: carabiner-dev/actions/<path>@<ref>' with 'uses: \$/<path>':"
+            echo "Replace 'uses: policylabs/actions/<path>@<ref>' with 'uses: \$/<path>':"
             echo "${HITS}"
             exit 1
           fi

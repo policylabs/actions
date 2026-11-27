@@ -13,7 +13,7 @@
 # binaries, compute their SHA-256 hashes, and update the case block below.
 
 name: Bootstrap ampel
-author: carabiner-dev
+author: policylabs
 description: 'Installs a hash-verified ampel binary for use as a trust anchor'
 branding:
   icon: 'shield'
